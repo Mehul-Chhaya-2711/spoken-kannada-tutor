@@ -1,9 +1,9 @@
 COURSE_DATA = {
     "course_title": "Spoken Kannada for Real Life",
-    "course_subtitle": "Level 1 - Foundation: Words to Useful Sentences",
-    "version": "1.0",
+    "course_subtitle": "Level 1 - Foundation to Core Sentences",
+    "version": "1.1",
     "language_mode": "English transliteration only",
-    "target_audience": "Absolute beginners who want to speak basic Kannada in daily life",
+    "target_audience": "Absolute beginners who want to speak practical Kannada in daily life",
     "teaching_style": {
         "approach": "conversation_first_pattern_based",
         "tone": "encouraging_clear_practical",
@@ -13,310 +13,724 @@ COURSE_DATA = {
     "level": {
         "level_id": "L1",
         "title": "Foundation",
-        "goal": "Build comfort with pronunciation, identity, daily-use words, sentence patterns, questions, need/want expressions, place/location, and simple present tense",
+        "goal": "Build comfort with pronunciation, identity, everyday words, sentence patterns, questions, place, numbers, nouns, pronouns, verbs, adjectives, and beginner tenses",
         "outcomes": [
             "Introduce yourself",
-            "Understand and use common daily words",
-            "Ask and answer basic questions",
-            "Say what you want, need, like, or do not want",
-            "Talk about home, place, family, and objects",
-            "Use simple daily actions in present tense",
-            "Handle very short real-life spoken exchanges"
+            "Use greetings and courtesy expressions",
+            "Recognize and use common nouns and pronouns",
+            "Build short sentences with objects, places, and people",
+            "Express need, refusal, liking, and understanding",
+            "Use basic verbs in present, past, future/intentional, and continuous forms",
+            "Handle short real-life spoken exchanges"
         ],
         "chapters": [
             {
                 "chapter_id": "L1_C1",
-                "title": "Sound, Flow, and Spoken Comfort",
-                "chapter_goal": "Help the learner hear and type Kannada more naturally in English letters",
+                "title": "Sound, Flow, and Pronunciation",
+                "chapter_goal": "Get comfortable hearing and typing Kannada in English letters",
                 "recommended_order": 1,
                 "subchapters": [
                     {
                         "id": "L1_C1_S1",
                         "title": "How Kannada Sounds in Transliteration",
-                        "learning_objective": "Understand that Kannada is largely phonetic and should be spoken in smooth sound groups, not broken English-style chunks",
-                        "theory": "Kannada is easier when heard as flowing sound blocks. Transliteration is only an approximation, so small spelling variations can still be acceptable if the sound is understandable. Focus on saying words smoothly and consistently.",
-                        "micro_tips": [
-                            "Say words in sound chunks: na-ma-ska-ra",
-                            "Do not over-stress English-style accents",
-                            "Double letters often indicate slightly heavier sounds: chenna, gottilla",
-                            "Long vowel variation is acceptable in Level 1 if the meaning is clear"
-                        ],
+                        "learning_objective": "Understand that Kannada is best learned as smooth sound groups.",
+                        "theory": "Kannada is largely phonetic. Transliteration is approximate, so small spelling differences are acceptable if the sound and meaning remain understandable.",
                         "examples": [
-                            {"kannada": "namaskara", "english": "hello", "pronunciation_hint": "na-ma-ska-ra"},
-                            {"kannada": "chennagide", "english": "it is good / fine", "pronunciation_hint": "chen-na-gi-de"},
-                            {"kannada": "nanage", "english": "to me / for me", "pronunciation_hint": "na-na-ge"},
-                            {"kannada": "gottilla", "english": "I don't know", "pronunciation_hint": "got-ti-lla"}
+                            {
+                                "kannada": "namaskara",
+                                "english": "hello",
+                                "pronunciation_hint": "na-ma-ska-ra"
+                            },
+                            {
+                                "kannada": "chennagide",
+                                "english": "it is good",
+                                "pronunciation_hint": "chen-na-gi-de"
+                            },
+                            {
+                                "kannada": "nanage",
+                                "english": "to me / for me",
+                                "pronunciation_hint": "na-na-ge"
+                            },
+                            {
+                                "kannada": "gottilla",
+                                "english": "I don't know",
+                                "pronunciation_hint": "got-ti-lla"
+                            },
+                            {
+                                "kannada": "mane",
+                                "english": "house / home",
+                                "pronunciation_hint": "ma-ne"
+                            },
+                            {
+                                "kannada": "neeru",
+                                "english": "water",
+                                "pronunciation_hint": "nee-ru"
+                            },
+                            {
+                                "kannada": "beku",
+                                "english": "want / need",
+                                "pronunciation_hint": "be-ku"
+                            },
+                            {
+                                "kannada": "yaake",
+                                "english": "why",
+                                "pronunciation_hint": "yaa-ke"
+                            },
+                            {
+                                "kannada": "elli",
+                                "english": "where",
+                                "pronunciation_hint": "el-li"
+                            },
+                            {
+                                "kannada": "barthini",
+                                "english": "I will come",
+                                "pronunciation_hint": "bar-thi-ni"
+                            }
                         ],
                         "patterns": [
-                            "Focus on sound groups, not single English letters"
+                            "Focus on sound groups, not single English letters",
+                            "Say words smoothly, not robotically"
                         ],
                         "common_mistakes": [
-                            "Breaking Kannada into hard English chunks",
-                            "Thinking there is only one correct transliteration spelling",
-                            "Ignoring flow and speaking letter-by-letter"
+                            "Reading transliteration as strict English spelling",
+                            "Ignoring doubled sounds like tt, nn, ll",
+                            "Stopping after every syllable"
+                        ],
+                        "test_scope": "Only ask about pronunciation awareness, sound flow, and identifying the most natural transliteration among close variants",
+                        "micro_tips": [
+                            "Speak in chunks: na-ma-ska-ra",
+                            "Double consonants often sound slightly heavier",
+                            "Level 1 accepts minor transliteration variation"
                         ],
                         "allowed_variations": [
                             "chennagide / chennagidey",
-                            "namaskara / namaskaraa"
-                        ],
-                        "test_scope": "Only ask about pronunciation awareness, sound flow, and identifying the most natural transliteration among close variants"
+                            "namaskara / namaskaraa",
+                            "gottilla / gottila"
+                        ]
                     },
                     {
                         "id": "L1_C1_S2",
                         "title": "Polite Spoken Flow",
-                        "learning_objective": "Start with respectful, beginner-safe spoken Kannada",
-                        "theory": "Beginners should first learn safe, polite spoken forms. Respectful forms like neevu are useful in most situations and avoid sounding too abrupt or too informal.",
-                        "micro_tips": [
-                            "Default to respectful forms first",
-                            "Short polite lines are better than long broken ones"
-                        ],
+                        "learning_objective": "Start with respectful and beginner-safe spoken Kannada.",
+                        "theory": "Beginners should default to polite forms such as neevu, especially with strangers, elders, and service interactions.",
                         "examples": [
-                            {"kannada": "neevu hegiddira?", "english": "How are you?"},
-                            {"kannada": "naanu chennagiddini", "english": "I am fine"},
-                            {"kannada": "dayavittu", "english": "please"}
+                            {
+                                "kannada": "neevu hegiddira?",
+                                "english": "How are you?"
+                            },
+                            {
+                                "kannada": "naanu chennagiddini",
+                                "english": "I am fine"
+                            },
+                            {
+                                "kannada": "dayavittu",
+                                "english": "please"
+                            },
+                            {
+                                "kannada": "dhanyavaada",
+                                "english": "thank you"
+                            },
+                            {
+                                "kannada": "kshamisi",
+                                "english": "excuse me / sorry"
+                            },
+                            {
+                                "kannada": "illi banni",
+                                "english": "come here"
+                            },
+                            {
+                                "kannada": "kuutkolli",
+                                "english": "please sit"
+                            },
+                            {
+                                "kannada": "haudu",
+                                "english": "yes"
+                            },
+                            {
+                                "kannada": "illa",
+                                "english": "no"
+                            },
+                            {
+                                "kannada": "nimma hesaru enu?",
+                                "english": "What is your name?"
+                            }
                         ],
                         "patterns": [
                             "neevu ___",
                             "naanu ___",
-                            "___ dayavittu"
+                            "___ dayavittu",
+                            "___ kshamisi"
                         ],
                         "common_mistakes": [
-                            "Using very casual forms with strangers immediately",
-                            "Memorizing words without practicing full mini-lines"
+                            "Using very casual forms too early",
+                            "Learning words but not mini-lines",
+                            "Sounding abrupt by using only yes/no"
                         ],
-                        "test_scope": "Generate simple beginner-safe spoken phrases using polite forms only"
+                        "test_scope": "Generate simple beginner-safe spoken phrases using polite forms only",
+                        "micro_tips": [
+                            "Use short full lines, not isolated words",
+                            "Respectful speech is safer than casual speech"
+                        ]
                     }
                 ]
             },
             {
                 "chapter_id": "L1_C2",
-                "title": "Identity, Pronouns, and Basic Self-Introduction",
-                "chapter_goal": "Learn who is who, how to name people, and how to introduce yourself",
+                "title": "Greetings and Social Basics",
+                "chapter_goal": "Handle first-contact conversation confidently",
                 "recommended_order": 2,
                 "subchapters": [
                     {
                         "id": "L1_C2_S1",
-                        "title": "Core Pronouns",
-                        "learning_objective": "Recognize and use the most useful personal references in beginner speech",
-                        "theory": "Pronouns are the backbone of early Kannada sentence building. Once these are understood, many real conversations become possible.",
+                        "title": "Greeting People",
+                        "learning_objective": "Use greetings and simple wellness exchanges naturally.",
+                        "theory": "Greeting patterns should become automatic. In Kannada, short and warm exchanges matter more than perfect grammar at the start.",
                         "examples": [
-                            {"kannada": "naanu", "english": "I"},
-                            {"kannada": "neevu", "english": "you"},
-                            {"kannada": "avanu", "english": "he"},
-                            {"kannada": "avalu", "english": "she"},
-                            {"kannada": "avaru", "english": "they / he / she (respectful)"}
+                            {
+                                "kannada": "namaskara",
+                                "english": "hello"
+                            },
+                            {
+                                "kannada": "shubha munjane",
+                                "english": "good morning"
+                            },
+                            {
+                                "kannada": "shubha sanje",
+                                "english": "good evening"
+                            },
+                            {
+                                "kannada": "shubha ratri",
+                                "english": "good night"
+                            },
+                            {
+                                "kannada": "neevu hegiddira?",
+                                "english": "How are you?"
+                            },
+                            {
+                                "kannada": "naanu chennagiddini",
+                                "english": "I am fine"
+                            },
+                            {
+                                "kannada": "chennagiddini, dhanyavaada",
+                                "english": "I am fine, thank you"
+                            },
+                            {
+                                "kannada": "nimmannu nodi santosha",
+                                "english": "Nice to meet you"
+                            },
+                            {
+                                "kannada": "hogi banni",
+                                "english": "goodbye / please go and come"
+                            },
+                            {
+                                "kannada": "matte sigona",
+                                "english": "let us meet again"
+                            }
+                        ],
+                        "patterns": [
+                            "namaskara",
+                            "neevu hegiddira?",
+                            "naanu chennagiddini",
+                            "___, dhanyavaada"
+                        ],
+                        "common_mistakes": [
+                            "Translating English greetings too literally",
+                            "Using long sentences before mastering short exchanges"
+                        ],
+                        "test_scope": "Only greetings, wellness lines, and basic social exchanges"
+                    },
+                    {
+                        "id": "L1_C2_S2",
+                        "title": "Courtesy and Daily Interaction Words",
+                        "learning_objective": "Use please, thanks, sorry, yes/no, and basic interaction phrases.",
+                        "theory": "These small words make speech more natural and polite. They also help beginners survive real interactions even with limited vocabulary.",
+                        "examples": [
+                            {
+                                "kannada": "dayavittu",
+                                "english": "please"
+                            },
+                            {
+                                "kannada": "dhanyavaada",
+                                "english": "thank you"
+                            },
+                            {
+                                "kannada": "kshamisi",
+                                "english": "sorry / excuse me"
+                            },
+                            {
+                                "kannada": "haudu",
+                                "english": "yes"
+                            },
+                            {
+                                "kannada": "illa",
+                                "english": "no"
+                            },
+                            {
+                                "kannada": "sari",
+                                "english": "okay"
+                            },
+                            {
+                                "kannada": "parvaagilla",
+                                "english": "it is okay / no problem"
+                            },
+                            {
+                                "kannada": "illi nodi",
+                                "english": "excuse me / look here"
+                            },
+                            {
+                                "kannada": "nimma sahaya beku",
+                                "english": "I need your help"
+                            },
+                            {
+                                "kannada": "nanage artha aagalla",
+                                "english": "I don't understand"
+                            }
+                        ],
+                        "patterns": [
+                            "___ dayavittu",
+                            "___ kshamisi",
+                            "sari",
+                            "parvaagilla",
+                            "nanage ___ beku"
+                        ],
+                        "common_mistakes": [
+                            "Using beda when you only mean no",
+                            "Using only English filler words like okay, sorry, please"
+                        ],
+                        "test_scope": "Only courtesy expressions and practical interaction lines"
+                    }
+                ]
+            },
+            {
+                "chapter_id": "L1_C3",
+                "title": "Pronouns and People",
+                "chapter_goal": "Recognize who is speaking about whom",
+                "recommended_order": 3,
+                "subchapters": [
+                    {
+                        "id": "L1_C3_S1",
+                        "title": "Core Pronouns",
+                        "learning_objective": "Use I, you, he, she, they, and this-person/that-person forms.",
+                        "theory": "Pronouns make conversation flexible. Early Kannada relies heavily on naanu, neevu, avanu, avalu, avaru, ivaru.",
+                        "examples": [
+                            {
+                                "kannada": "naanu",
+                                "english": "I"
+                            },
+                            {
+                                "kannada": "naavu",
+                                "english": "we"
+                            },
+                            {
+                                "kannada": "neevu",
+                                "english": "you"
+                            },
+                            {
+                                "kannada": "ninu",
+                                "english": "you (casual singular)"
+                            },
+                            {
+                                "kannada": "avanu",
+                                "english": "he"
+                            },
+                            {
+                                "kannada": "avalu",
+                                "english": "she"
+                            },
+                            {
+                                "kannada": "avaru",
+                                "english": "they / he / she respectful"
+                            },
+                            {
+                                "kannada": "ivanu",
+                                "english": "this man / this boy"
+                            },
+                            {
+                                "kannada": "ivalu",
+                                "english": "this woman / this girl"
+                            },
+                            {
+                                "kannada": "ivaru",
+                                "english": "this person / these people respectful"
+                            }
                         ],
                         "patterns": [
                             "naanu ___",
                             "neevu ___",
                             "avanu ___",
                             "avalu ___",
-                            "avaru ___"
+                            "ivaru ___"
                         ],
                         "common_mistakes": [
-                            "Using avaru and avanu interchangeably without context",
-                            "Forgetting that simple identity lines are often compact in Kannada"
+                            "Mixing casual and respectful pronouns randomly",
+                            "Using avaru and avanu without context awareness"
                         ],
-                        "test_scope": "Only generate questions on matching pronouns to meaning and building tiny identity lines"
-                    },
-                    {
-                        "id": "L1_C2_S2",
-                        "title": "Saying Your Name",
-                        "learning_objective": "Introduce yourself and ask someone their name",
-                        "theory": "A foundational pattern is naming: 'nanna hesaru ___' and asking 'nimma hesaru enu?'",
-                        "examples": [
-                            {"kannada": "nanna hesaru Mehul", "english": "My name is Mehul"},
-                            {"kannada": "nimma hesaru enu?", "english": "What is your name?"},
-                            {"kannada": "nanna hesaru Ananya", "english": "My name is Ananya"}
-                        ],
-                        "patterns": [
-                            "nanna hesaru ___",
-                            "nimma hesaru enu?"
-                        ],
-                        "common_mistakes": [
-                            "Using English word order directly",
-                            "Replacing nimma with ninna too early in formal contexts"
-                        ],
-                        "test_scope": "Generate only name-related speaking prompts and short intro exchanges"
-                    },
-                    {
-                        "id": "L1_C2_S3",
-                        "title": "Who Is This? Who Are You?",
-                        "learning_objective": "Ask and answer simple identity questions",
-                        "theory": "Basic who-questions are core to real conversation.",
-                        "examples": [
-                            {"kannada": "neevu yaaru?", "english": "Who are you?"},
-                            {"kannada": "ivaru yaaru?", "english": "Who is this (respectful)?"},
-                            {"kannada": "avaru nanna snehita", "english": "He / she is my friend"},
-                            {"kannada": "naanu doctor", "english": "I am a doctor"}
-                        ],
-                        "patterns": [
-                            "___ yaaru?",
-                            "naanu ___",
-                            "ivaru ___",
-                            "avaru ___"
-                        ],
-                        "common_mistakes": [
-                            "Trying to force English am/is/are everywhere",
-                            "Not recognizing that short identity statements are normal"
-                        ],
-                        "test_scope": "Identity only: asking who someone is, answering with profession or relation"
-                    }
-                ]
-            },
-            {
-                "chapter_id": "L1_C3",
-                "title": "Greetings, Courtesy, and Social Basics",
-                "chapter_goal": "Sound pleasant, polite, and socially functional in everyday Kannada",
-                "recommended_order": 3,
-                "subchapters": [
-                    {
-                        "id": "L1_C3_S1",
-                        "title": "Greetings",
-                        "learning_objective": "Use beginner-friendly greetings and responses",
-                        "theory": "Short greeting exchanges are among the first things a learner should become comfortable with.",
-                        "examples": [
-                            {"kannada": "namaskara", "english": "hello"},
-                            {"kannada": "neevu hegiddira?", "english": "How are you?"},
-                            {"kannada": "naanu chennagiddini", "english": "I am fine"},
-                            {"kannada": "chennagiddini, dhanyavaada", "english": "I am fine, thank you"}
-                        ],
-                        "patterns": [
-                            "namaskara",
-                            "neevu hegiddira?",
-                            "naanu chennagiddini"
-                        ],
-                        "common_mistakes": [
-                            "Trying to translate English greetings literally",
-                            "Using too many words instead of short natural lines"
-                        ],
-                        "test_scope": "Only greetings, polite responses, and wellness phrases"
+                        "test_scope": "Only pronoun recognition and tiny pronoun-based sentences"
                     },
                     {
                         "id": "L1_C3_S2",
-                        "title": "Please, Thank You, Sorry, Yes, No",
-                        "learning_objective": "Handle the social glue words of daily interaction",
-                        "theory": "Courtesy words are small but powerful in real conversations.",
+                        "title": "Talking About People Around You",
+                        "learning_objective": "Say who someone is in relation to you.",
+                        "theory": "Beginner Kannada becomes useful very fast when pronouns combine with relationship words or professions.",
                         "examples": [
-                            {"kannada": "dayavittu", "english": "please"},
-                            {"kannada": "dhanyavaada", "english": "thank you"},
-                            {"kannada": "kshamisi", "english": "excuse me / sorry"},
-                            {"kannada": "haudu", "english": "yes"},
-                            {"kannada": "illa", "english": "no"}
+                            {
+                                "kannada": "ivaru nanna appa",
+                                "english": "This is my father"
+                            },
+                            {
+                                "kannada": "avalu nanna tangi",
+                                "english": "She is my younger sister"
+                            },
+                            {
+                                "kannada": "avanu nanna snehita",
+                                "english": "He is my friend"
+                            },
+                            {
+                                "kannada": "ivanu nanna tamma",
+                                "english": "This is my younger brother"
+                            },
+                            {
+                                "kannada": "avaru nanna teacher",
+                                "english": "He / she is my teacher"
+                            },
+                            {
+                                "kannada": "avalu doctor",
+                                "english": "She is a doctor"
+                            },
+                            {
+                                "kannada": "avanu engineer",
+                                "english": "He is an engineer"
+                            },
+                            {
+                                "kannada": "ivaru namma manager",
+                                "english": "This is our manager"
+                            },
+                            {
+                                "kannada": "avaru namma neighbor",
+                                "english": "They are our neighbor"
+                            },
+                            {
+                                "kannada": "naanu student",
+                                "english": "I am a student"
+                            }
                         ],
                         "patterns": [
-                            "haudu / illa",
-                            "dayavittu ___",
-                            "kshamisi ___"
+                            "ivaru nanna ___",
+                            "avalu ___",
+                            "avanu ___",
+                            "naanu ___"
                         ],
                         "common_mistakes": [
-                            "Using only yes/no without softening tone",
-                            "Overusing English sorry instead of a Kannada courtesy line"
+                            "Trying to add English is/am/are everywhere",
+                            "Creating overly long introductions too early"
                         ],
-                        "test_scope": "Only courtesy expressions and their everyday use"
+                        "test_scope": "Only identity + relationship/profession sentences"
                     }
                 ]
             },
             {
                 "chapter_id": "L1_C4",
-                "title": "Daily Words: Food, Water, Home, Time",
-                "chapter_goal": "Build a usable bank of high-frequency daily vocabulary",
+                "title": "Names, Identity, and Basic Questions",
+                "chapter_goal": "Introduce yourself and ask who/what questions",
                 "recommended_order": 4,
                 "subchapters": [
                     {
                         "id": "L1_C4_S1",
-                        "title": "Food and Drink Basics",
-                        "learning_objective": "Recognize and say the most useful daily food words",
-                        "theory": "Food and drink vocabulary is highly reusable in early spoken Kannada.",
+                        "title": "Saying Your Name and Identity",
+                        "learning_objective": "Introduce yourself and ask someone their name.",
+                        "theory": "Two essential starter patterns are 'nanna hesaru ___' and 'nimma hesaru enu?'",
                         "examples": [
-                            {"kannada": "thindi", "english": "snack / breakfast"},
-                            {"kannada": "oota", "english": "meal / lunch / food"},
-                            {"kannada": "kaapi", "english": "coffee"},
-                            {"kannada": "neeru", "english": "water"},
-                            {"kannada": "haalu", "english": "milk"},
-                            {"kannada": "tea / chaha", "english": "tea"}
+                            {
+                                "kannada": "nanna hesaru Mehul",
+                                "english": "My name is Mehul"
+                            },
+                            {
+                                "kannada": "nanna hesaru Ananya",
+                                "english": "My name is Ananya"
+                            },
+                            {
+                                "kannada": "nanna hesaru Ravi",
+                                "english": "My name is Ravi"
+                            },
+                            {
+                                "kannada": "nimma hesaru enu?",
+                                "english": "What is your name?"
+                            },
+                            {
+                                "kannada": "naanu Bengaluru inda",
+                                "english": "I am from Bengaluru"
+                            },
+                            {
+                                "kannada": "naanu teacher",
+                                "english": "I am a teacher"
+                            },
+                            {
+                                "kannada": "naanu student",
+                                "english": "I am a student"
+                            },
+                            {
+                                "kannada": "naanu doctor alla",
+                                "english": "I am not a doctor"
+                            },
+                            {
+                                "kannada": "naanu Kannada kalithiddini",
+                                "english": "I am learning Kannada"
+                            },
+                            {
+                                "kannada": "nimma hesaru tumba chennagide",
+                                "english": "Your name is very nice"
+                            }
                         ],
                         "patterns": [
-                            "___ beeku",
-                            "___ beda",
-                            "idu ___"
+                            "nanna hesaru ___",
+                            "nimma hesaru enu?",
+                            "naanu ___"
                         ],
                         "common_mistakes": [
-                            "Learning words without using them in request sentences",
-                            "Confusing oota and thindi everywhere"
+                            "Using English word order directly",
+                            "Forgetting hesaru in name sentences"
                         ],
-                        "test_scope": "Only basic food/drink identification and tiny request sentences"
+                        "test_scope": "Only name, identity, and short self-introduction prompts"
                     },
                     {
                         "id": "L1_C4_S2",
-                        "title": "Home and Everyday Objects",
-                        "learning_objective": "Talk about a house, room, book, pen, and common objects",
-                        "theory": "Early object vocabulary supports real conversation quickly.",
+                        "title": "Who, What, and Which Basic Questions",
+                        "learning_objective": "Ask who, what, and which in short practical forms.",
+                        "theory": "Question words are more useful when learned inside sentence patterns than in isolation.",
                         "examples": [
-                            {"kannada": "mane", "english": "house"},
-                            {"kannada": "roomu", "english": "room"},
-                            {"kannada": "pustaka", "english": "book"},
-                            {"kannada": "pennu", "english": "pen"},
-                            {"kannada": "idu nanna pustaka", "english": "This is my book"},
-                            {"kannada": "adu namma mane", "english": "That is our house"}
+                            {
+                                "kannada": "neevu yaaru?",
+                                "english": "Who are you?"
+                            },
+                            {
+                                "kannada": "ivaru yaaru?",
+                                "english": "Who is this?"
+                            },
+                            {
+                                "kannada": "avaru yaaru?",
+                                "english": "Who is that person?"
+                            },
+                            {
+                                "kannada": "idu enu?",
+                                "english": "What is this?"
+                            },
+                            {
+                                "kannada": "adu enu?",
+                                "english": "What is that?"
+                            },
+                            {
+                                "kannada": "nimma mane yaavdu?",
+                                "english": "Which is your house?"
+                            },
+                            {
+                                "kannada": "yaava pustaka nimdu?",
+                                "english": "Which book is yours?"
+                            },
+                            {
+                                "kannada": "yaava roomu?",
+                                "english": "Which room?"
+                            },
+                            {
+                                "kannada": "yaaru barthiddare?",
+                                "english": "Who is coming?"
+                            },
+                            {
+                                "kannada": "enu beku?",
+                                "english": "What do you want?"
+                            }
                         ],
                         "patterns": [
-                            "idu ___",
-                            "adu ___",
-                            "idu nanna ___",
-                            "adu namma ___"
+                            "___ yaaru?",
+                            "idu enu?",
+                            "adu enu?",
+                            "yaava ___ ?",
+                            "___ yaavdu?"
                         ],
                         "common_mistakes": [
-                            "Not distinguishing idu and adu",
-                            "Trying to say long noun phrases too early"
+                            "Mixing what and which carelessly",
+                            "Adding unnecessary English helper words"
                         ],
-                        "test_scope": "Only objects, this/that, and simple ownership lines"
-                    },
-                    {
-                        "id": "L1_C4_S3",
-                        "title": "Time Words",
-                        "learning_objective": "Understand common time references in simple speech",
-                        "theory": "Short time words help learners build routine sentences quickly.",
-                        "examples": [
-                            {"kannada": "iga", "english": "now"},
-                            {"kannada": "amele", "english": "later"},
-                            {"kannada": "modalu", "english": "before"},
-                            {"kannada": "beligge", "english": "morning"},
-                            {"kannada": "madhyana", "english": "afternoon"},
-                            {"kannada": "sanje", "english": "evening"},
-                            {"kannada": "ratri", "english": "night"}
-                        ],
-                        "patterns": [
-                            "iga ___",
-                            "amele ___",
-                            "beligge ___",
-                            "ratri ___"
-                        ],
-                        "common_mistakes": [
-                            "Using time words without a sentence pattern",
-                            "Mixing now and later"
-                        ],
-                        "test_scope": "Only basic time words in beginner daily-life contexts"
+                        "test_scope": "Only who/what/which beginner questions and simple answers"
                     }
                 ]
             },
             {
                 "chapter_id": "L1_C5",
-                "title": "Possession and Belonging",
-                "chapter_goal": "Say my, your, our, his, her, and mine/yours in natural early speech",
+                "title": "Nouns and Everyday Vocabulary",
+                "chapter_goal": "Build a strong bank of usable daily nouns",
                 "recommended_order": 5,
                 "subchapters": [
                     {
                         "id": "L1_C5_S1",
-                        "title": "My, Your, Our, His, Her",
-                        "learning_objective": "Use possessive forms naturally in short speech",
-                        "theory": "Possession patterns are essential to real daily conversation.",
+                        "title": "Food, Drink, and Household Nouns",
+                        "learning_objective": "Learn high-frequency everyday nouns for real-life use.",
+                        "theory": "Nouns are easiest to retain when grouped by real-life context such as food, home, and objects.",
                         "examples": [
-                            {"kannada": "nanna mane", "english": "my house"},
-                            {"kannada": "nimma pustaka", "english": "your book"},
-                            {"kannada": "namma classu", "english": "our class"},
-                            {"kannada": "avana pennu", "english": "his pen"},
-                            {"kannada": "avala hesaru", "english": "her name"}
+                            {
+                                "kannada": "neeru",
+                                "english": "water"
+                            },
+                            {
+                                "kannada": "haalu",
+                                "english": "milk"
+                            },
+                            {
+                                "kannada": "kaapi",
+                                "english": "coffee"
+                            },
+                            {
+                                "kannada": "tea",
+                                "english": "tea"
+                            },
+                            {
+                                "kannada": "oota",
+                                "english": "meal / lunch / food"
+                            },
+                            {
+                                "kannada": "thindi",
+                                "english": "snack / breakfast"
+                            },
+                            {
+                                "kannada": "anna",
+                                "english": "rice"
+                            },
+                            {
+                                "kannada": "motte",
+                                "english": "egg"
+                            },
+                            {
+                                "kannada": "mane",
+                                "english": "house"
+                            },
+                            {
+                                "kannada": "roomu",
+                                "english": "room"
+                            }
+                        ],
+                        "patterns": [
+                            "idu ___",
+                            "nanage ___ beeku",
+                            "___ elli?"
+                        ],
+                        "common_mistakes": [
+                            "Memorizing nouns without using them in sentences",
+                            "Mixing category meanings like thindi and oota all the time"
+                        ],
+                        "test_scope": "Only daily noun recognition and short noun-based sentences"
+                    },
+                    {
+                        "id": "L1_C5_S2",
+                        "title": "Objects, Places, and Practical Nouns",
+                        "learning_objective": "Use common nouns for objects and places around you.",
+                        "theory": "Object and place nouns help create real short conversations quickly: where is the book, whose pen is this, which room, etc.",
+                        "examples": [
+                            {
+                                "kannada": "pustaka",
+                                "english": "book"
+                            },
+                            {
+                                "kannada": "pennu",
+                                "english": "pen"
+                            },
+                            {
+                                "kannada": "bagu",
+                                "english": "bag"
+                            },
+                            {
+                                "kannada": "table",
+                                "english": "table"
+                            },
+                            {
+                                "kannada": "chairu",
+                                "english": "chair"
+                            },
+                            {
+                                "kannada": "office",
+                                "english": "office"
+                            },
+                            {
+                                "kannada": "schoolu",
+                                "english": "school"
+                            },
+                            {
+                                "kannada": "marketu",
+                                "english": "market"
+                            },
+                            {
+                                "kannada": "bus standu",
+                                "english": "bus stand"
+                            },
+                            {
+                                "kannada": "hospitalu",
+                                "english": "hospital"
+                            }
+                        ],
+                        "patterns": [
+                            "idu ___",
+                            "adu ___",
+                            "___ elli ide?",
+                            "nanage ___ beeku"
+                        ],
+                        "common_mistakes": [
+                            "Not reusing nouns in questions",
+                            "Using only labels without sentence practice"
+                        ],
+                        "test_scope": "Only object/place nouns in very short questions and statements"
+                    }
+                ]
+            },
+            {
+                "chapter_id": "L1_C6",
+                "title": "Possession and Belonging",
+                "chapter_goal": "Say my, your, our, his, her, and mine/yours/ours",
+                "recommended_order": 6,
+                "subchapters": [
+                    {
+                        "id": "L1_C6_S1",
+                        "title": "My, Your, Our, His, Her",
+                        "learning_objective": "Use possessive forms in short natural speech.",
+                        "theory": "Possession is essential in daily conversation: my book, your house, our class, his pen, her name.",
+                        "examples": [
+                            {
+                                "kannada": "nanna mane",
+                                "english": "my house"
+                            },
+                            {
+                                "kannada": "nimma pustaka",
+                                "english": "your book"
+                            },
+                            {
+                                "kannada": "namma classu",
+                                "english": "our class"
+                            },
+                            {
+                                "kannada": "avana pennu",
+                                "english": "his pen"
+                            },
+                            {
+                                "kannada": "avala hesaru",
+                                "english": "her name"
+                            },
+                            {
+                                "kannada": "nanna bagu",
+                                "english": "my bag"
+                            },
+                            {
+                                "kannada": "nimma office",
+                                "english": "your office"
+                            },
+                            {
+                                "kannada": "namma schoolu",
+                                "english": "our school"
+                            },
+                            {
+                                "kannada": "avana friendu",
+                                "english": "his friend"
+                            },
+                            {
+                                "kannada": "avala roomu",
+                                "english": "her room"
+                            }
                         ],
                         "patterns": [
                             "nanna ___",
@@ -327,324 +741,827 @@ COURSE_DATA = {
                         ],
                         "common_mistakes": [
                             "Confusing nanna and nanage",
-                            "Using English-style of-constructions"
+                            "Trying to express possession in English-style long structures"
                         ],
-                        "test_scope": "Only possession phrases and tiny sentences"
+                        "test_scope": "Only possession phrases and tiny possession sentences"
                     },
                     {
-                        "id": "L1_C5_S2",
-                        "title": "Mine, Yours, Ours",
-                        "learning_objective": "Express belonging with forms like mine and yours",
-                        "theory": "These short belonging forms make beginner speech more flexible.",
+                        "id": "L1_C6_S2",
+                        "title": "Mine, Yours, Ours, His, Hers",
+                        "learning_objective": "Express belonging directly with nandu-like forms.",
+                        "theory": "These belonging forms make speech compact and practical: this is mine, that is yours, this is ours.",
                         "examples": [
-                            {"kannada": "idu nandu", "english": "this is mine"},
-                            {"kannada": "adu nimdu", "english": "that is yours"},
-                            {"kannada": "idu namdu", "english": "this is ours"}
+                            {
+                                "kannada": "idu nandu",
+                                "english": "this is mine"
+                            },
+                            {
+                                "kannada": "adu nimdu",
+                                "english": "that is yours"
+                            },
+                            {
+                                "kannada": "idu namdu",
+                                "english": "this is ours"
+                            },
+                            {
+                                "kannada": "adu avandhu",
+                                "english": "that is his"
+                            },
+                            {
+                                "kannada": "idu avaldhu",
+                                "english": "this is hers"
+                            },
+                            {
+                                "kannada": "ii pustaka nandu",
+                                "english": "this book is mine"
+                            },
+                            {
+                                "kannada": "aa bagu nimdu",
+                                "english": "that bag is yours"
+                            },
+                            {
+                                "kannada": "ii roomu namdu",
+                                "english": "this room is ours"
+                            },
+                            {
+                                "kannada": "aa pen avandhu",
+                                "english": "that pen is his"
+                            },
+                            {
+                                "kannada": "ii notebook avaldhu",
+                                "english": "this notebook is hers"
+                            }
                         ],
                         "patterns": [
                             "idu nandu",
                             "adu nimdu",
-                            "idu namdu"
+                            "idu namdu",
+                            "___ avandhu",
+                            "___ avaldhu"
                         ],
                         "common_mistakes": [
                             "Using nanna where nandu is needed",
-                            "Over-translating from English"
+                            "Mixing possession phrase and belonging phrase structures"
                         ],
-                        "test_scope": "Only mine/yours/ours patterns with this/that"
-                    }
-                ]
-            },
-            {
-                "chapter_id": "L1_C6",
-                "title": "Need, Want, Like, and Refusal",
-                "chapter_goal": "Express practical everyday needs and simple preferences",
-                "recommended_order": 6,
-                "subchapters": [
-                    {
-                        "id": "L1_C6_S1",
-                        "title": "Beeku - Need / Want",
-                        "learning_objective": "Say what you want or need in daily life",
-                        "theory": "One of the most useful early Kannada structures is expressing need or want with beeku.",
-                        "examples": [
-                            {"kannada": "nanage neeru beeku", "english": "I need water"},
-                            {"kannada": "nanage coffee beeku", "english": "I want coffee"},
-                            {"kannada": "nanage doctor beeku", "english": "I need a doctor"}
-                        ],
-                        "patterns": [
-                            "nanage ___ beeku"
-                        ],
-                        "common_mistakes": [
-                            "Dropping nanage",
-                            "Using English order directly"
-                        ],
-                        "test_scope": "Only beginner request / need sentences using beeku"
-                    },
-                    {
-                        "id": "L1_C6_S2",
-                        "title": "Beda - Don't Want / No Need",
-                        "learning_objective": "Refuse politely or say you do not want something",
-                        "theory": "Beda is a very common everyday refusal word.",
-                        "examples": [
-                            {"kannada": "nanage coffee beda", "english": "I don't want coffee"},
-                            {"kannada": "nanage idu beda", "english": "I don't want this"},
-                            {"kannada": "nanage tumba beda", "english": "I really don't want it"}
-                        ],
-                        "patterns": [
-                            "nanage ___ beda",
-                            "idu beda"
-                        ],
-                        "common_mistakes": [
-                            "Using beda too abruptly",
-                            "Confusing illa with beda"
-                        ],
-                        "test_scope": "Only refusal / no-need expressions with everyday nouns"
-                    },
-                    {
-                        "id": "L1_C6_S3",
-                        "title": "Ishta / Gottu / Gottilla",
-                        "learning_objective": "Express liking, knowing, and not knowing at a beginner level",
-                        "theory": "These are very high-value expressions for natural conversation.",
-                        "examples": [
-                            {"kannada": "nanage kaapi ishta", "english": "I like coffee"},
-                            {"kannada": "nanage gottu", "english": "I know"},
-                            {"kannada": "nanage gottilla", "english": "I don't know"}
-                        ],
-                        "patterns": [
-                            "nanage ___ ishta",
-                            "nanage gottu",
-                            "nanage gottilla"
-                        ],
-                        "common_mistakes": [
-                            "Using English like-structure directly",
-                            "Overcomplicating very short useful lines"
-                        ],
-                        "test_scope": "Only liking / knowing / not knowing in simple first-person lines"
+                        "test_scope": "Only mine/yours/ours/his/hers patterns with known nouns"
                     }
                 ]
             },
             {
                 "chapter_id": "L1_C7",
-                "title": "Question Words and Survival Questions",
-                "chapter_goal": "Ask what, who, where, when, why, which, and simple help questions",
+                "title": "Need, Want, Refusal, and Preference",
+                "chapter_goal": "Express practical needs and likes clearly",
                 "recommended_order": 7,
                 "subchapters": [
                     {
                         "id": "L1_C7_S1",
-                        "title": "Core Question Words",
-                        "learning_objective": "Use beginner question words in short practical questions",
-                        "theory": "Question words are best learned inside short usable sentence frames.",
+                        "title": "Beeku and Beda",
+                        "learning_objective": "Say what you need or do not want.",
+                        "theory": "Beeku is one of the most useful spoken Kannada words. Beda is the everyday refusal or 'don't want' form.",
                         "examples": [
-                            {"kannada": "yaaru?", "english": "who?"},
-                            {"kannada": "elli?", "english": "where?"},
-                            {"kannada": "yaavaga?", "english": "when?"},
-                            {"kannada": "yaake?", "english": "why?"},
-                            {"kannada": "enu?", "english": "what?"},
-                            {"kannada": "yaava?", "english": "which?"}
+                            {
+                                "kannada": "nanage neeru beeku",
+                                "english": "I need water"
+                            },
+                            {
+                                "kannada": "nanage coffee beeku",
+                                "english": "I want coffee"
+                            },
+                            {
+                                "kannada": "nanage doctor beeku",
+                                "english": "I need a doctor"
+                            },
+                            {
+                                "kannada": "nanage sahaya beeku",
+                                "english": "I need help"
+                            },
+                            {
+                                "kannada": "nanage idu beeku",
+                                "english": "I want this"
+                            },
+                            {
+                                "kannada": "nanage roomu beeku",
+                                "english": "I need a room"
+                            },
+                            {
+                                "kannada": "nanage coffee beda",
+                                "english": "I don't want coffee"
+                            },
+                            {
+                                "kannada": "nanage idu beda",
+                                "english": "I don't want this"
+                            },
+                            {
+                                "kannada": "nanage tumba beda",
+                                "english": "I really don't want it"
+                            },
+                            {
+                                "kannada": "sihi beda",
+                                "english": "I don't want sweets"
+                            }
                         ],
                         "patterns": [
-                            "___ yaaru?",
-                            "___ elli?",
-                            "___ enu?"
+                            "nanage ___ beeku",
+                            "nanage ___ beda",
+                            "idu beeku",
+                            "idu beda"
                         ],
                         "common_mistakes": [
-                            "Learning question words separately but not in sentence frames",
-                            "Adding too many English filler words"
+                            "Dropping nanage",
+                            "Using illa when you mean refusal instead of absence or no"
                         ],
-                        "test_scope": "Only question-word-based tiny questions and simple answers"
+                        "test_scope": "Only request / need / refusal sentences using beeku and beda"
                     },
                     {
                         "id": "L1_C7_S2",
-                        "title": "Useful Survival Questions",
-                        "learning_objective": "Ask for help, location, and understanding",
-                        "theory": "Short practical help questions are more useful than long perfect sentences at this stage.",
+                        "title": "Ishta, Gottu, Gottilla, Saaku",
+                        "learning_objective": "Express liking, knowing, not knowing, and enough.",
+                        "theory": "These small words make conversations feel real very quickly.",
                         "examples": [
-                            {"kannada": "nimage English gotha?", "english": "Do you know English?"},
-                            {"kannada": "nanage artha aagalla", "english": "I don't understand"},
-                            {"kannada": "toilet elli?", "english": "Where is the toilet?"},
-                            {"kannada": "nimma sahaya beeku", "english": "I need your help"}
+                            {
+                                "kannada": "nanage kaapi ishta",
+                                "english": "I like coffee"
+                            },
+                            {
+                                "kannada": "nanage Kannada ishta",
+                                "english": "I like Kannada"
+                            },
+                            {
+                                "kannada": "nanage music ishta",
+                                "english": "I like music"
+                            },
+                            {
+                                "kannada": "nanage gottu",
+                                "english": "I know"
+                            },
+                            {
+                                "kannada": "nanage gottilla",
+                                "english": "I don't know"
+                            },
+                            {
+                                "kannada": "nanage swalpa gottu",
+                                "english": "I know a little"
+                            },
+                            {
+                                "kannada": "idu saaku",
+                                "english": "this is enough"
+                            },
+                            {
+                                "kannada": "ondu doose saaku",
+                                "english": "one dosa is enough"
+                            },
+                            {
+                                "kannada": "nanage ishta illa",
+                                "english": "I don't like it"
+                            },
+                            {
+                                "kannada": "nanage swalpa beku, jasthi beda",
+                                "english": "I need a little, not too much"
+                            }
                         ],
                         "patterns": [
-                            "___ elli?",
-                            "nanage ___ beeku",
-                            "nanage artha aagalla"
+                            "nanage ___ ishta",
+                            "nanage gottu",
+                            "nanage gottilla",
+                            "___ saaku"
                         ],
                         "common_mistakes": [
-                            "Trying long help requests before mastering short urgent ones",
-                            "Using only English nouns when short Kannada questions work"
+                            "Overcomplicating these short useful lines",
+                            "Treating saaku and beda as identical"
                         ],
-                        "test_scope": "Only practical help / understanding / location questions"
+                        "test_scope": "Only liking, knowing, not knowing, and enough expressions"
                     }
                 ]
             },
             {
                 "chapter_id": "L1_C8",
-                "title": "This, That, Here, There, Which One",
-                "chapter_goal": "Talk about nearby and distant things naturally",
+                "title": "Numbers, Quantity, and Counting",
+                "chapter_goal": "Handle everyday numbers and small quantities",
                 "recommended_order": 8,
                 "subchapters": [
                     {
                         "id": "L1_C8_S1",
-                        "title": "Idu and Adu",
-                        "learning_objective": "Distinguish this and that clearly",
-                        "theory": "This and that patterns are basic building blocks for daily speech.",
+                        "title": "Numbers 1 to 10",
+                        "learning_objective": "Recognize and use the first ten numbers in everyday speech.",
+                        "theory": "Numbers become useful when tied to objects and requests rather than learned in isolation.",
                         "examples": [
-                            {"kannada": "idu pustaka", "english": "This is a book"},
-                            {"kannada": "adu mane", "english": "That is a house"},
-                            {"kannada": "idu nanna pustaka", "english": "This is my book"}
+                            {
+                                "kannada": "ondu",
+                                "english": "one"
+                            },
+                            {
+                                "kannada": "eradu",
+                                "english": "two"
+                            },
+                            {
+                                "kannada": "mooru",
+                                "english": "three"
+                            },
+                            {
+                                "kannada": "naalku",
+                                "english": "four"
+                            },
+                            {
+                                "kannada": "aidu",
+                                "english": "five"
+                            },
+                            {
+                                "kannada": "aaru",
+                                "english": "six"
+                            },
+                            {
+                                "kannada": "elu",
+                                "english": "seven"
+                            },
+                            {
+                                "kannada": "entu",
+                                "english": "eight"
+                            },
+                            {
+                                "kannada": "ombattu",
+                                "english": "nine"
+                            },
+                            {
+                                "kannada": "hattu",
+                                "english": "ten"
+                            }
                         ],
                         "patterns": [
-                            "idu ___",
-                            "adu ___"
+                            "ondu ___",
+                            "eradu ___",
+                            "mooru ___",
+                            "hattu ___"
                         ],
                         "common_mistakes": [
-                            "Using one form for both this and that",
-                            "Mixing object words with place words"
+                            "Confusing similar sounds under pressure",
+                            "Learning numbers without pairing them with nouns"
                         ],
-                        "test_scope": "Only this/that object identification and ownership"
+                        "test_scope": "Only 1 to 10 and simple number+noun combinations"
                     },
                     {
                         "id": "L1_C8_S2",
-                        "title": "Illi, Alli, Elli",
-                        "learning_objective": "Say here, there, and where",
-                        "theory": "These location anchors make simple conversations much easier.",
+                        "title": "Everyday Quantity Phrases",
+                        "learning_objective": "Use numbers with common nouns and practical transactions.",
+                        "theory": "Quantity phrases make numbers immediately usable in speech.",
                         "examples": [
-                            {"kannada": "illi", "english": "here"},
-                            {"kannada": "alli", "english": "there"},
-                            {"kannada": "elli", "english": "where"},
-                            {"kannada": "illi banni", "english": "Come here"},
-                            {"kannada": "adu alli ide", "english": "That is there"}
+                            {
+                                "kannada": "ondu kaapi",
+                                "english": "one coffee"
+                            },
+                            {
+                                "kannada": "eradu pustaka",
+                                "english": "two books"
+                            },
+                            {
+                                "kannada": "mooru idli",
+                                "english": "three idlis"
+                            },
+                            {
+                                "kannada": "naalku jana",
+                                "english": "four people"
+                            },
+                            {
+                                "kannada": "aidu rupayi",
+                                "english": "five rupees"
+                            },
+                            {
+                                "kannada": "eradu roomu",
+                                "english": "two rooms"
+                            },
+                            {
+                                "kannada": "ondu bottle neeru",
+                                "english": "one bottle of water"
+                            },
+                            {
+                                "kannada": "mooru pen",
+                                "english": "three pens"
+                            },
+                            {
+                                "kannada": "eradu bagu",
+                                "english": "two bags"
+                            },
+                            {
+                                "kannada": "hattu nimisha",
+                                "english": "ten minutes"
+                            }
                         ],
                         "patterns": [
-                            "___ illi ide",
-                            "___ alli ide",
-                            "___ elli ide?"
+                            "ondu ___",
+                            "eradu ___",
+                            "mooru ___",
+                            "___ jana",
+                            "___ rupayi"
                         ],
                         "common_mistakes": [
-                            "Confusing object words with place words",
-                            "Using only elli without practicing answers"
+                            "Forgetting to practice numbers inside real contexts",
+                            "Using only counting drills without speech use"
                         ],
-                        "test_scope": "Only simple place-location questions and answers"
-                    },
-                    {
-                        "id": "L1_C8_S3",
-                        "title": "Which One?",
-                        "learning_objective": "Ask and answer which one at a beginner level",
-                        "theory": "Which-one questions are especially useful for houses, books, rooms, and objects.",
-                        "examples": [
-                            {"kannada": "nimma mane yaavdu?", "english": "Which is your house?"},
-                            {"kannada": "yaava pustaka nimdu?", "english": "Which book is yours?"}
-                        ],
-                        "patterns": [
-                            "___ yaavdu?",
-                            "yaava ___ ?"
-                        ],
-                        "common_mistakes": [
-                            "Mixing which and what too early",
-                            "Making the sentence too long"
-                        ],
-                        "test_scope": "Only beginner which-one identification using known nouns"
+                        "test_scope": "Only simple quantity phrases with known nouns"
                     }
                 ]
             },
             {
                 "chapter_id": "L1_C9",
-                "title": "Family and People Around You",
-                "chapter_goal": "Talk about family members and simple relationships",
+                "title": "Adjectives and Description",
+                "chapter_goal": "Describe things, people, and objects simply",
                 "recommended_order": 9,
                 "subchapters": [
                     {
                         "id": "L1_C9_S1",
-                        "title": "Family Words",
-                        "learning_objective": "Use common family terms in simple speech",
-                        "theory": "Family terms are among the most useful early conversation words.",
+                        "title": "Basic Adjectives",
+                        "learning_objective": "Use common describing words like big, small, good, bad, new, old.",
+                        "theory": "Adjectives are easiest to learn with familiar nouns: big house, small room, good book, old car.",
                         "examples": [
-                            {"kannada": "amma", "english": "mother"},
-                            {"kannada": "appa", "english": "father"},
-                            {"kannada": "anna", "english": "elder brother"},
-                            {"kannada": "akka", "english": "elder sister"},
-                            {"kannada": "tamma", "english": "younger brother"},
-                            {"kannada": "tangi", "english": "younger sister"}
+                            {
+                                "kannada": "dodda mane",
+                                "english": "big house"
+                            },
+                            {
+                                "kannada": "chikka roomu",
+                                "english": "small room"
+                            },
+                            {
+                                "kannada": "olleyadu",
+                                "english": "good one / good"
+                            },
+                            {
+                                "kannada": "kettadhu",
+                                "english": "bad one / bad"
+                            },
+                            {
+                                "kannada": "hosa pustaka",
+                                "english": "new book"
+                            },
+                            {
+                                "kannada": "hale caru",
+                                "english": "old car"
+                            },
+                            {
+                                "kannada": "sundara hudugi",
+                                "english": "beautiful girl"
+                            },
+                            {
+                                "kannada": "dodda office",
+                                "english": "big office"
+                            },
+                            {
+                                "kannada": "chikka bagu",
+                                "english": "small bag"
+                            },
+                            {
+                                "kannada": "olleyadu kaapi",
+                                "english": "good coffee"
+                            }
                         ],
                         "patterns": [
-                            "ivaru nanna ___",
-                            "avaru namma ___"
+                            "dodda ___",
+                            "chikka ___",
+                            "hosa ___",
+                            "hale ___",
+                            "olleyadu ___"
                         ],
                         "common_mistakes": [
-                            "Using only English family words while practicing",
-                            "Not reusing pronoun + family patterns"
+                            "Trying to learn many rare adjectives too early",
+                            "Forgetting adjective+noun combinations"
                         ],
-                        "test_scope": "Only family relations and basic identity lines"
+                        "test_scope": "Only basic adjective+noun combinations"
                     },
                     {
                         "id": "L1_C9_S2",
-                        "title": "Talking About People Around You",
-                        "learning_objective": "Describe who someone is in relation to you",
-                        "theory": "Family language becomes much more useful when tied to simple identity sentences.",
+                        "title": "Describing Quality and Preference",
+                        "learning_objective": "Describe whether something is good, bad, beautiful, hot, cold, sweet, etc.",
+                        "theory": "Simple description is a major part of spoken interaction: good coffee, hot dosa, cold water, sweet mango.",
                         "examples": [
-                            {"kannada": "ivaru nanna appa", "english": "This is my father"},
-                            {"kannada": "avalu nanna tangi", "english": "She is my younger sister"},
-                            {"kannada": "avanu nanna snehita", "english": "He is my friend"}
+                            {
+                                "kannada": "kaapi chennagide",
+                                "english": "The coffee is good"
+                            },
+                            {
+                                "kannada": "doose bisi ide",
+                                "english": "The dosa is hot"
+                            },
+                            {
+                                "kannada": "neeru thampagide",
+                                "english": "The water is cool"
+                            },
+                            {
+                                "kannada": "mavu sihi ide",
+                                "english": "The mango is sweet"
+                            },
+                            {
+                                "kannada": "ii pustaka olleyadu",
+                                "english": "This book is good"
+                            },
+                            {
+                                "kannada": "aa roomu chikka ide",
+                                "english": "That room is small"
+                            },
+                            {
+                                "kannada": "ii mane dodda ide",
+                                "english": "This house is big"
+                            },
+                            {
+                                "kannada": "hava chali ide",
+                                "english": "The weather is cold"
+                            },
+                            {
+                                "kannada": "ii tea bisi ide",
+                                "english": "This tea is hot"
+                            },
+                            {
+                                "kannada": "aa hotelu olleyadu",
+                                "english": "That hotel is good"
+                            }
                         ],
                         "patterns": [
-                            "ivaru nanna ___",
-                            "avalu nanna ___",
-                            "avanu nanna ___"
+                            "___ chennagide",
+                            "___ bisi ide",
+                            "___ chali ide",
+                            "___ sihi ide",
+                            "___ dodda ide"
                         ],
                         "common_mistakes": [
-                            "Jumping to complicated relationship explanations too early"
+                            "Using adjective lists but not full sentences",
+                            "Confusing noun phrases with full descriptive statements"
                         ],
-                        "test_scope": "Only identity + family/friend relations"
+                        "test_scope": "Only simple descriptive sentences using taught adjectives"
                     }
                 ]
             },
             {
                 "chapter_id": "L1_C10",
-                "title": "Simple Actions in the Present",
-                "chapter_goal": "Start speaking about what you do in simple daily life",
+                "title": "Place, Location, and Direction Words",
+                "chapter_goal": "Ask and answer where things are",
                 "recommended_order": 10,
                 "subchapters": [
                     {
                         "id": "L1_C10_S1",
-                        "title": "Go, Come, Eat, Drink, Read, Write",
-                        "learning_objective": "Use a small set of everyday verbs in present-style beginner sentences",
-                        "theory": "A small controlled verb set is enough to start forming real-life daily sentences.",
+                        "title": "This, That, Here, There, Where",
+                        "learning_objective": "Use idu/adu and illi/alli/elli confidently.",
+                        "theory": "These place and pointing words are high-frequency building blocks of real speech.",
                         "examples": [
-                            {"kannada": "naanu barthini", "english": "I come / I will come"},
-                            {"kannada": "naanu hogthini", "english": "I go / I will go"},
-                            {"kannada": "naanu oodthini", "english": "I read / study"},
-                            {"kannada": "naanu barithini", "english": "I write"},
-                            {"kannada": "naanu neeru kudithini", "english": "I drink water"}
+                            {
+                                "kannada": "idu pustaka",
+                                "english": "This is a book"
+                            },
+                            {
+                                "kannada": "adu mane",
+                                "english": "That is a house"
+                            },
+                            {
+                                "kannada": "illi",
+                                "english": "here"
+                            },
+                            {
+                                "kannada": "alli",
+                                "english": "there"
+                            },
+                            {
+                                "kannada": "elli?",
+                                "english": "where?"
+                            },
+                            {
+                                "kannada": "idu illi ide",
+                                "english": "This is here"
+                            },
+                            {
+                                "kannada": "adu alli ide",
+                                "english": "That is there"
+                            },
+                            {
+                                "kannada": "toilet elli?",
+                                "english": "Where is the toilet?"
+                            },
+                            {
+                                "kannada": "bus standu alli ide",
+                                "english": "The bus stand is there"
+                            },
+                            {
+                                "kannada": "nanna bagu illi ide",
+                                "english": "My bag is here"
+                            }
                         ],
                         "patterns": [
-                            "naanu ___ thini",
-                            "neevu ___ thira?"
+                            "idu ___",
+                            "adu ___",
+                            "___ illi ide",
+                            "___ alli ide",
+                            "___ elli?"
                         ],
                         "common_mistakes": [
-                            "Expecting perfect tense distinctions immediately",
-                            "Mixing learned words with English verbs"
+                            "Mixing object words with place words",
+                            "Using only elli without answer practice"
                         ],
-                        "test_scope": "Only a small controlled verb set: go, come, eat, drink, read, write"
+                        "test_scope": "Only this/that/here/there/where patterns"
                     },
                     {
                         "id": "L1_C10_S2",
-                        "title": "Mini Daily Routine Sentences",
-                        "learning_objective": "Describe a tiny routine in two to four simple lines",
-                        "theory": "This is where Level 1 starts feeling like real speech: combine time words, daily words, and common actions.",
+                        "title": "Basic Place and Direction Expressions",
+                        "learning_objective": "Use near, far, in front, behind, and place-related mini-lines.",
+                        "theory": "These expressions help learners move beyond label-level speech into useful navigation and object-location speech.",
                         "examples": [
-                            {"kannada": "beligge naanu kaapi kudithini", "english": "In the morning I drink coffee"},
-                            {"kannada": "naanu officege hogthini", "english": "I go to the office"},
-                            {"kannada": "ratri naanu manege barthini", "english": "At night I come home"}
+                            {
+                                "kannada": "hatra",
+                                "english": "near"
+                            },
+                            {
+                                "kannada": "doora",
+                                "english": "far"
+                            },
+                            {
+                                "kannada": "munde",
+                                "english": "in front"
+                            },
+                            {
+                                "kannada": "hinde",
+                                "english": "behind"
+                            },
+                            {
+                                "kannada": "mane hatra",
+                                "english": "near the house"
+                            },
+                            {
+                                "kannada": "schoolu doora ide",
+                                "english": "The school is far"
+                            },
+                            {
+                                "kannada": "caru mane munde ide",
+                                "english": "The car is in front of the house"
+                            },
+                            {
+                                "kannada": "gardenu mane hinde ide",
+                                "english": "The garden is behind the house"
+                            },
+                            {
+                                "kannada": "hotelu illige hatra ide",
+                                "english": "The hotel is near here"
+                            },
+                            {
+                                "kannada": "stationu swalpa doora ide",
+                                "english": "The station is a little far"
+                            }
                         ],
                         "patterns": [
-                            "beligge naanu ___",
-                            "iga naanu ___",
-                            "ratri naanu ___"
+                            "___ hatra ide",
+                            "___ doora ide",
+                            "___ munde ide",
+                            "___ hinde ide"
                         ],
                         "common_mistakes": [
-                            "Trying to narrate too much too early",
-                            "Using many English connectors instead of simple Kannada lines"
+                            "Trying long route explanations too early",
+                            "Not pairing place words with a noun"
                         ],
-                        "test_scope": "Only beginner daily-routine lines built from already taught words and verbs"
+                        "test_scope": "Only simple place and direction expressions"
+                    }
+                ]
+            },
+            {
+                "chapter_id": "L1_C11",
+                "title": "Verbs and Daily Actions",
+                "chapter_goal": "Build real beginner sentences with common verbs",
+                "recommended_order": 11,
+                "subchapters": [
+                    {
+                        "id": "L1_C11_S1",
+                        "title": "Core Everyday Verbs",
+                        "learning_objective": "Use go, come, eat, drink, read, write, sit, sleep, and walk in simple speech.",
+                        "theory": "A small controlled verb set is enough to start building daily routine speech.",
+                        "examples": [
+                            {
+                                "kannada": "barodu",
+                                "english": "to come"
+                            },
+                            {
+                                "kannada": "hogodu",
+                                "english": "to go"
+                            },
+                            {
+                                "kannada": "tinodu",
+                                "english": "to eat"
+                            },
+                            {
+                                "kannada": "kudiyodu",
+                                "english": "to drink"
+                            },
+                            {
+                                "kannada": "oododu",
+                                "english": "to read / study"
+                            },
+                            {
+                                "kannada": "bariyodu",
+                                "english": "to write"
+                            },
+                            {
+                                "kannada": "kuutkollodu",
+                                "english": "to sit"
+                            },
+                            {
+                                "kannada": "malagodu",
+                                "english": "to sleep"
+                            },
+                            {
+                                "kannada": "nadeyodu",
+                                "english": "to walk"
+                            },
+                            {
+                                "kannada": "nododu",
+                                "english": "to see"
+                            }
+                        ],
+                        "patterns": [
+                            "___ barodu",
+                            "___ hogodu",
+                            "___ tinodu",
+                            "___ kudiyodu"
+                        ],
+                        "common_mistakes": [
+                            "Trying to learn too many verbs before using core ones",
+                            "Not noticing which verbs appear in daily routine talk"
+                        ],
+                        "test_scope": "Only recognition and controlled use of core daily verbs"
+                    },
+                    {
+                        "id": "L1_C11_S2",
+                        "title": "Short Action Sentences",
+                        "learning_objective": "Use core verbs in short present-style sentences.",
+                        "theory": "At this stage, the goal is not perfect grammar coverage but confident short action lines.",
+                        "examples": [
+                            {
+                                "kannada": "naanu barthini",
+                                "english": "I will come / I come"
+                            },
+                            {
+                                "kannada": "naanu hogthini",
+                                "english": "I go / I will go"
+                            },
+                            {
+                                "kannada": "naanu oota tinnthini",
+                                "english": "I eat food"
+                            },
+                            {
+                                "kannada": "naanu neeru kudithini",
+                                "english": "I drink water"
+                            },
+                            {
+                                "kannada": "naanu pustaka oodthini",
+                                "english": "I read a book"
+                            },
+                            {
+                                "kannada": "naanu patra barithini",
+                                "english": "I write a letter"
+                            },
+                            {
+                                "kannada": "naanu illi kuutkollthini",
+                                "english": "I sit here"
+                            },
+                            {
+                                "kannada": "ratri naanu malagthini",
+                                "english": "At night I sleep"
+                            },
+                            {
+                                "kannada": "beligge naanu nadeythini",
+                                "english": "In the morning I walk"
+                            },
+                            {
+                                "kannada": "naanu sinema nodthini",
+                                "english": "I watch a movie"
+                            }
+                        ],
+                        "patterns": [
+                            "naanu ___ thini",
+                            "beligge naanu ___",
+                            "ratri naanu ___",
+                            "naanu ___ thira?"
+                        ],
+                        "common_mistakes": [
+                            "Expecting full tense precision immediately",
+                            "Mixing English verbs with Kannada nouns"
+                        ],
+                        "test_scope": "Only short present-style action sentences using taught verbs"
+                    }
+                ]
+            },
+            {
+                "chapter_id": "L1_C12",
+                "title": "Beginner Tenses: Present, Past, Future, Continuous",
+                "chapter_goal": "Get a practical feel for time in spoken Kannada",
+                "recommended_order": 12,
+                "subchapters": [
+                    {
+                        "id": "L1_C12_S1",
+                        "title": "Simple Present and Habit",
+                        "learning_objective": "Say what you do regularly or generally.",
+                        "theory": "In beginner spoken Kannada, present and near-future forms often overlap in daily usage. What matters first is building confidence with habitual daily lines.",
+                        "examples": [
+                            {
+                                "kannada": "naanu beligge kaapi kudithini",
+                                "english": "I drink coffee in the morning"
+                            },
+                            {
+                                "kannada": "naanu officege hogthini",
+                                "english": "I go to the office"
+                            },
+                            {
+                                "kannada": "naanu Kannada oodthini",
+                                "english": "I study Kannada"
+                            },
+                            {
+                                "kannada": "naanu ratri manege barthini",
+                                "english": "I come home at night"
+                            },
+                            {
+                                "kannada": "naanu doose tinnthini",
+                                "english": "I eat dosa"
+                            },
+                            {
+                                "kannada": "naanu swalpa walk maadthini",
+                                "english": "I do a little walking"
+                            },
+                            {
+                                "kannada": "naanu pustaka oodthini",
+                                "english": "I read books"
+                            },
+                            {
+                                "kannada": "naanu friendige phone maadthini",
+                                "english": "I call my friend"
+                            },
+                            {
+                                "kannada": "naanu Sunday rest maadthini",
+                                "english": "I rest on Sunday"
+                            },
+                            {
+                                "kannada": "naanu swalpa Kannada maathadthini",
+                                "english": "I speak a little Kannada"
+                            }
+                        ],
+                        "patterns": [
+                            "naanu ___ thini",
+                            "beligge naanu ___",
+                            "dinaa naanu ___"
+                        ],
+                        "common_mistakes": [
+                            "Thinking present must map exactly to English present",
+                            "Waiting for perfect grammar before speaking"
+                        ],
+                        "test_scope": "Only beginner present/habit sentences with familiar verbs"
+                    },
+                    {
+                        "id": "L1_C12_S2",
+                        "title": "Past, Future/Intention, and Continuous Feel",
+                        "learning_objective": "Recognize and use very basic time contrasts: did, will, am doing.",
+                        "theory": "Level 1 only needs a practical feel for time. The learner should notice the difference between 'I did', 'I will do', and 'I am doing'.",
+                        "examples": [
+                            {
+                                "kannada": "naanu ninne kaapi kudde",
+                                "english": "I drank coffee yesterday"
+                            },
+                            {
+                                "kannada": "naanu ninne officege hode",
+                                "english": "I went to the office yesterday"
+                            },
+                            {
+                                "kannada": "naanu ninne pustaka oodde",
+                                "english": "I read a book yesterday"
+                            },
+                            {
+                                "kannada": "naanu naale barthini",
+                                "english": "I will come tomorrow"
+                            },
+                            {
+                                "kannada": "naanu naale hogthini",
+                                "english": "I will go tomorrow"
+                            },
+                            {
+                                "kannada": "naanu iga oodthiddini",
+                                "english": "I am studying now"
+                            },
+                            {
+                                "kannada": "naanu iga barithiddini",
+                                "english": "I am writing now"
+                            },
+                            {
+                                "kannada": "avalu iga maathadthiddale",
+                                "english": "She is speaking now"
+                            },
+                            {
+                                "kannada": "avanu naale barthane",
+                                "english": "He will come tomorrow"
+                            },
+                            {
+                                "kannada": "naavu ninne sinema noddevu",
+                                "english": "We watched a movie yesterday"
+                            }
+                        ],
+                        "patterns": [
+                            "ninne naanu ___ de",
+                            "naale naanu ___ thini",
+                            "iga naanu ___ thiddini"
+                        ],
+                        "common_mistakes": [
+                            "Trying to master every tense ending analytically too early",
+                            "Mixing time word and tense form inconsistently"
+                        ],
+                        "test_scope": "Only basic past / future intention / present continuous contrasts using taught verbs"
                     }
                 ]
             }
