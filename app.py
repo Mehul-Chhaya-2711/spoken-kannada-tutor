@@ -1,5 +1,6 @@
 import streamlit as st
 from course_data import COURSE_DATA
+from llm_utils import generate_quiz, evaluate_quiz
 
 st.set_page_config(
     page_title="Spoken Kannada Tutor",
@@ -39,6 +40,13 @@ def get_subchapter_index(subchapter_id):
             return i
     return 0
 
+def reset_quiz_state():
+    st.session_state.quiz_started_for = None
+    st.session_state.quiz_data = None
+    st.session_state.quiz_answers = []
+    st.session_state.quiz_result = None
+    st.session_state.quiz_error = None
+
 # -----------------------------
 # SESSION STATE
 # -----------------------------
@@ -52,6 +60,18 @@ if "visited_subchapters" not in st.session_state:
 
 if "quiz_started_for" not in st.session_state:
     st.session_state.quiz_started_for = None
+
+if "quiz_data" not in st.session_state:
+    st.session_state.quiz_data = None
+
+if "quiz_answers" not in st.session_state:
+    st.session_state.quiz_answers = []
+
+if "quiz_result" not in st.session_state:
+    st.session_state.quiz_result = None
+
+if "quiz_error" not in st.session_state:
+    st.session_state.quiz_error = None
 
 # mark current as visited
 st.session_state.visited_subchapters.add(st.session_state.selected_subchapter_id)
@@ -74,7 +94,7 @@ with st.sidebar:
                 if st.button(label, key=f"nav_{sub['id']}", use_container_width=True):
                     st.session_state.selected_subchapter_id = sub["id"]
                     st.session_state.visited_subchapters.add(sub["id"])
-                    st.session_state.quiz_started_for = None
+                    reset_quiz_state()
                     st.rerun()
 
 # -----------------------------
@@ -89,7 +109,6 @@ total_subchapters = len(all_subchapters)
 visited_count = len(st.session_state.visited_subchapters)
 progress_percent = int((visited_count / total_subchapters) * 100)
 
-# recommended next
 next_subchapter = None
 if current_index + 1 < total_subchapters:
     next_subchapter = all_subchapters[current_index + 1]
@@ -152,13 +171,105 @@ with main_col:
     st.markdown("### Practice")
 
     if st.button("Test Myself", type="primary"):
-        st.session_state.quiz_started_for = current_subchapter["id"]
-        st.rerun()
+        try:
+            with st.spinner("Generating quiz..."):
+                quiz_data = generate_quiz(current_subchapter)
+            st.session_state.quiz_started_for = current_subchapter["id"]
+            st.session_state.quiz_data = quiz_data
+            st.session_state.quiz_answers = [""] * len(quiz_data.get("questions", []))
+            st.session_state.quiz_result = None
+            st.session_state.quiz_error = None
+            st.rerun()
+        except Exception as e:
+            st.session_state.quiz_error = str(e)
+            st.error(f"Could not generate quiz: {e}")
 
-    if st.session_state.quiz_started_for == current_subchapter["id"]:
-        st.success("Quiz mode placeholder is ready. In the next step, this button will generate 5 LLM-based questions for this subchapter.")
+    if st.session_state.quiz_error:
+        st.error(f"Quiz error: {st.session_state.quiz_error}")
 
-    # navigation buttons
+    if (
+        st.session_state.quiz_started_for == current_subchapter["id"]
+        and st.session_state.quiz_data
+    ):
+        quiz_data = st.session_state.quiz_data
+        questions = quiz_data.get("questions", [])
+
+        st.success(quiz_data.get("quiz_title", "Quiz Ready"))
+        st.write(quiz_data.get("instructions", ""))
+
+        with st.form(key=f"quiz_form_{current_subchapter['id']}"):
+            answers = []
+            for i, q in enumerate(questions):
+                st.markdown(f"**Q{i+1}. {q.get('question_text', '')}**")
+                if q.get("hint"):
+                    st.caption(f"Hint: {q['hint']}")
+                ans = st.text_input(
+                    "Your answer",
+                    value=st.session_state.quiz_answers[i] if i < len(st.session_state.quiz_answers) else "",
+                    key=f"quiz_answer_{current_subchapter['id']}_{i}"
+                )
+                answers.append(ans)
+                st.markdown("")
+
+            submitted = st.form_submit_button("Submit Quiz")
+
+            if submitted:
+                try:
+                    st.session_state.quiz_answers = answers
+                    with st.spinner("Evaluating your answers..."):
+                        result = evaluate_quiz(current_subchapter, quiz_data, answers)
+                    st.session_state.quiz_result = result
+                    st.rerun()
+                except Exception as e:
+                    st.session_state.quiz_error = str(e)
+                    st.error(f"Could not evaluate quiz: {e}")
+
+        if st.button("Generate Fresh Quiz"):
+            try:
+                with st.spinner("Generating a fresh quiz..."):
+                    quiz_data = generate_quiz(current_subchapter)
+                st.session_state.quiz_data = quiz_data
+                st.session_state.quiz_answers = [""] * len(quiz_data.get("questions", []))
+                st.session_state.quiz_result = None
+                st.session_state.quiz_error = None
+                st.rerun()
+            except Exception as e:
+                st.session_state.quiz_error = str(e)
+                st.error(f"Could not generate fresh quiz: {e}")
+
+    if (
+        st.session_state.quiz_started_for == current_subchapter["id"]
+        and st.session_state.quiz_result
+    ):
+        result = st.session_state.quiz_result
+
+        st.markdown("---")
+        st.markdown("### Quiz Feedback")
+
+        score = result.get("overall_score", 0)
+        max_score = result.get("max_score", 10)
+        passed = result.get("pass", False)
+
+        st.write(f"**Score:** {score} / {max_score}")
+
+        if passed:
+            st.success("Pass")
+        else:
+            st.warning("Retry")
+
+        st.write(f"**Summary feedback:** {result.get('summary_feedback', '')}")
+        st.write(f"**Encouragement:** {result.get('encouragement', '')}")
+
+        for item in result.get("results", []):
+            st.markdown("---")
+            st.markdown(f"**Question {item.get('question_no', '')}:** {item.get('question_text', '')}")
+            st.write(f"**Your answer:** {item.get('user_answer', '')}")
+            st.write(f"**Result:** {item.get('result', '')}")
+            st.write(f"**Score:** {item.get('score', '')} / 2")
+            st.write(f"**Better answer:** {item.get('better_answer', '')}")
+            st.write(f"**English meaning:** {item.get('english_meaning', '')}")
+            st.write(f"**Explanation:** {item.get('explanation', '')}")
+
     nav_left, nav_right = st.columns(2)
 
     with nav_left:
@@ -166,7 +277,7 @@ with main_col:
             if st.button("⬅ Previous Subchapter", use_container_width=True):
                 prev_item = all_subchapters[current_index - 1]
                 st.session_state.selected_subchapter_id = prev_item["subchapter_id"]
-                st.session_state.quiz_started_for = None
+                reset_quiz_state()
                 st.rerun()
 
     with nav_right:
@@ -175,7 +286,7 @@ with main_col:
                 next_item = all_subchapters[current_index + 1]
                 st.session_state.selected_subchapter_id = next_item["subchapter_id"]
                 st.session_state.visited_subchapters.add(next_item["subchapter_id"])
-                st.session_state.quiz_started_for = None
+                reset_quiz_state()
                 st.rerun()
 
 with side_col:
@@ -206,5 +317,5 @@ with side_col:
     if st.button("Reset Session Progress", use_container_width=True):
         st.session_state.selected_subchapter_id = all_subchapters[0]["subchapter_id"]
         st.session_state.visited_subchapters = set()
-        st.session_state.quiz_started_for = None
+        reset_quiz_state()
         st.rerun()
