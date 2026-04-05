@@ -200,7 +200,7 @@ st.title("🗣️ Spoken Kannada Tutor")
 st.write("Learn beginner Kannada through English transliteration only.")
 
 total_lessons = len(LESSONS)
-passed_count = len(st.session_state.passed_lessons)
+passed_count = len(set(st.session_state.passed_lessons))
 progress_percent = int((passed_count / total_lessons) * 100)
 
 st.progress(progress_percent)
