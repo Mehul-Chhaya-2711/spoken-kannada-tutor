@@ -240,6 +240,8 @@ if lesson:
 
                 if st.session_state.current_lesson < total_lessons:
                     st.session_state.current_lesson += 1
+                    st.session_state.last_result = None
+                    st.rerun()
 
     if st.session_state.last_result:
         last = st.session_state.last_result
